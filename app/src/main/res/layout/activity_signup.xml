@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signup"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rkrmills.sih_rozgaar.signup">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+        <!--<EditText-->
+        <!--android:id="@+id/name_Sid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="name"-->
+        <!--android:inputType="text"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@android:color/white" />-->
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/username_Sid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/designation_Sid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="designation"
+                android:textColor="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/dpt_Sid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="department"
+                android:textColor="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/office_Sid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="office"
+                android:textColor="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/email_Sid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:textColor="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/pswrd_Sid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:textColor="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!--<EditText-->
+        <!--android:id="@+id/designation_Sid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:hint="designation"-->
+        <!--android:imeActionId="@+id/login"-->
+        <!--android:imeOptions="actionUnspecified"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@android:color/white" />-->
+        <!--<EditText-->
+        <!--android:id="@+id/department_Sid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:hint="department"-->
+        <!--android:imeActionId="@+id/login"-->
+        <!--android:imeOptions="actionUnspecified"-->
+        <!--android:inputType="phone"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@android:color/white" />-->
+        <!--<EditText-->
+        <!--android:id="@+id/office_Sid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:hint="office"-->
+        <!--android:imeActionId="@+id/login"-->
+        <!--android:imeOptions="actionUnspecified"-->
+        <!--android:inputType="phone"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@android:color/white" />-->
+        <Button
+            android:id="@+id/sign_up_btn"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorAccent"
+            android:text="SIGN UP"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+        <!-- Link to Login Screen -->
+
+        <Button
+            android:id="@+id/login_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:text="Already Registred? Login!"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

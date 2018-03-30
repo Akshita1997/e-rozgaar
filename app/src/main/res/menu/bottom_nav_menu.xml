@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-app"
+    xmlns:app1="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_files"
+        android:enabled="true"
+        android:icon="@drawable/ic_files"
+        android:title="My files"
+        app1:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_scan"
+        android:enabled="true"
+        android:icon="@drawable/ic_scan"
+        android:title="scan"
+        app1:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="profile"
+        app1:showAsAction="ifRoom"/>
+
+</menu>

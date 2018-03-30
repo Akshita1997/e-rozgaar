@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_files_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.rkrmills.sih_rozgaar.files_fragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My pending files"
+        android:textColor="@color/colorAccent"
+        android:padding="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My approved files"
+        android:textColor="@color/colorAccent"
+        android:padding="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My On Hold files"
+        android:textColor="@color/colorAccent"
+        android:padding="16dp"/>
+
+</LinearLayout>

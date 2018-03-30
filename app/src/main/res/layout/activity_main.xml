@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.rkrmills.sih_rozgaar.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/email_Lid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="text"
+                android:textColor="@color/white"
+                />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/icon_selector"
+            app:passwordToggleTint="@color/colorAccent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/password_Lid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_reset_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:layout_marginRight="16dp"
+
+            android:text="@string/btn_forgot_password"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+
+
+        <Button
+            android:id="@+id/sign_in_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorAccent"
+            android:text="LOGIN"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+
+        <!-- Link to Signup Screen -->
+
+        <Button
+            android:id="@+id/sign_up_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:text="No Account Yet? Create Account!"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+
+</android.support.constraint.ConstraintLayout>
+

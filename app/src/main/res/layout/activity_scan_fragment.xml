@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scan_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.rkrmills.sih_rozgaar.scan_fragment">
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Scan QR Code"
+        />
+
+    <TextView
+        android:paddingTop="20dp"
+        android:layout_below="@+id/buttonScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Application ID"
+        android:id="@+id/application_id1"/>
+
+    <TextView
+        android:layout_below="@+id/application_id1"
+        android:id="@+id/application_id2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/user_id1"
+        android:layout_below="@+id/application_id2"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="User ID" />
+
+    <TextView
+        android:layout_below="@+id/user_id1"
+        android:id="@+id/user_id2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Gmail" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textViewGmail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="abc@gmail.com"-->
+    <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/user_id2">
+
+        <TextView
+            android:id="@+id/approved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_id2"
+            android:paddingTop="12dp"
+            android:text="Approved"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pending"
+            android:layout_below="@+id/approved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:paddingTop="12dp"/>
+
+        <TextView
+            android:id="@+id/hold_on"
+            android:layout_below="@id/pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hold On"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:paddingTop="12dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
