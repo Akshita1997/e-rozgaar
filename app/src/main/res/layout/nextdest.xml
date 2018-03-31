@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
 android:gravity="center"
-    android:background="@drawable/bg"
+    android:background="@drawable/new_login_gradients"
     tools:context="com.example.rkrmills.sih_rozgaar.nextdest">
 
 
@@ -50,6 +50,10 @@ android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Assistant Registrar"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Approval Completed"/>
         </RadioGroup>
 
     <Button
@@ -57,7 +61,7 @@ android:gravity="center"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:text="Submit"
-       android:background="#10a3ba"/>
+       android:background="@drawable/background_signup"/>
 
 
 </LinearLayout>

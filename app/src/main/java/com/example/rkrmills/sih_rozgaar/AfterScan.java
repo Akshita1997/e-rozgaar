@@ -235,6 +235,9 @@ public class AfterScan extends AppCompatActivity {
                 // Add the request to the RequestQueue.
                 queue.add(stringRequest);
 
+                Intent intent = new Intent(AfterScan.this, nextHoldOn.class);
+                startActivity(intent);
+
 
             }
 

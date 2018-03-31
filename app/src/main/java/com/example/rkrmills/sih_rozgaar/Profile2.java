@@ -42,90 +42,92 @@ public class Profile2 extends AppCompatActivity {
 
 
         profile_designation = (TextView) findViewById(R.id.designation);
-        profile_name = (TextView) findViewById(R.id.profile_name);
-        profile_email=(TextView) findViewById(R.id.profile_email);
+        profile_name = (TextView) findViewById(R.id.name);
+        profile_email = (TextView) findViewById(R.id.profile_email);
+        profile_dept = (TextView) findViewById(R.id.department);
         profile_email.setText(email1);
         profile_designation.setText(designation);
         profile_name.setText(name1);
-        String url= "https://plausible-alley.glitch.me/admins/profile";
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
-                url, null, new Response.Listener<JSONObject>() {
-
-            @Override
-            public void onResponse(JSONObject response) {
-                Log.d(TAG, response.toString());
-
-
-                try {
-                    //  Parsing json object response
-                    // response will be a json object
-                  //  JSONObject json_LL = response.getJSONObject("user");
-                    String id = response.getString("id");
-
-                    String email = response.getString("email");
+        profile_dept.setText(department);
+//        String url= "https://plausible-alley.glitch.me/admins/profile";
+//        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
+//                url, null, new Response.Listener<JSONObject>() {
 //
-                    String designation = response.getString("designation");
-                    String name = response.getString("name");
+//            @Override
+//            public void onResponse(JSONObject response) {
+//                Log.d(TAG, response.toString());
 //
-
-//                    jsonResponse = "";
-//                    jsonResponse += "Name: " + name + "\n\n";
-//                    jsonResponse += "Email: " + email + "\n\n";
-//                    jsonResponse += "Home: " + home + "\n\n";
-//                    jsonResponse += "Mobile: " + mobile + "\n\n";
-
-//                    profile_name.setText(name);
-//                    profile_designation.setText(designation);
-
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(),
-                            "Error: " + e.getMessage(),
-                            Toast.LENGTH_LONG).show();
-                }
-                hidepDialog();
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(TAG, "Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
-                // hide the progress dialog
-                hidepDialog();
-            }
-        }){
-
-            /**
-             * Passing some request headers
-             */
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                //headers.put("Content-Type", "application/json");
-                headers.put("token", token);
-                return headers;
-            }
-        };
-
-
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(jsonObjReq);
+//
+//                try {
+//                    //  Parsing json object response
+//                    // response will be a json object
+//                  //  JSONObject json_LL = response.getJSONObject("user");
+//                    String id = response.getString("id");
+//
+//                    String email = response.getString("email");
+////
+//                    String designation = response.getString("designation");
+//                    String name = response.getString("name");
+////
+//
+////                    jsonResponse = "";
+////                    jsonResponse += "Name: " + name + "\n\n";
+////                    jsonResponse += "Email: " + email + "\n\n";
+////                    jsonResponse += "Home: " + home + "\n\n";
+////                    jsonResponse += "Mobile: " + mobile + "\n\n";
+//
+////                    profile_name.setText(name);
+////                    profile_designation.setText(designation);
+//
+//
+//
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                    Toast.makeText(getApplicationContext(),
+//                            "Error: " + e.getMessage(),
+//                            Toast.LENGTH_LONG).show();
+//                }
+//                hidepDialog();
+//            }
+//        }, new Response.ErrorListener() {
+//
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                VolleyLog.d(TAG, "Error: " + error.getMessage());
+//                Toast.makeText(getApplicationContext(),
+//                        error.getMessage(), Toast.LENGTH_SHORT).show();
+//                // hide the progress dialog
+//                hidepDialog();
+//            }
+//        }){
+//
+//            /**
+//             * Passing some request headers
+//             */
+//            @Override
+//            public Map<String, String> getHeaders() throws AuthFailureError {
+//                HashMap<String, String> headers = new HashMap<String, String>();
+//                //headers.put("Content-Type", "application/json");
+//                headers.put("token", token);
+//                return headers;
+//            }
+//        };
+//
+//
+//        // Adding request to request queue
+//        AppController.getInstance().addToRequestQueue(jsonObjReq);
+//    }
+//    private void showpDialog() {
+////        if (!pDialog.isShowing())
+////            pDialog.show();
+//    }
+//
+//
+//    private void hidepDialog() {
+////       if (pDialog.isShowing())
+////            pDialog.dismiss();
+//    }
     }
-    private void showpDialog() {
-//        if (!pDialog.isShowing())
-//            pDialog.show();
-    }
-
-
-    private void hidepDialog() {
-//       if (pDialog.isShowing())
-//            pDialog.dismiss();
-    }
-
 }
 
 

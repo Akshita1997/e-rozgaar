@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_signup"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/new_login_gradients"
     tools:context="com.example.rkrmills.sih_rozgaar.signup">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp">
+            <!--logo-->
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/logo"
+                />
+
 
 
 
@@ -28,32 +46,31 @@
         <!--android:singleLine="true"-->
         <!--android:textColor="@android:color/white" />-->
 
-        <android.support.design.widget.TextInputLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/username_Sid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content">
 
-                android:hint="name" />
-        </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/username_Sid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="username"
+                    android:textColor="@color/white"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
 
-        <android.support.design.widget.TextInputLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/dpt_Sid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="department"
-                android:textColor="@color/white"/>
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="wrap_content">
 
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dpt_Sid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="department"
+                    android:textColor="@color/white"/>
+            </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
 
@@ -151,7 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@color/colorAccent"
+            android:background="@drawable/background_login"
             android:text="SIGN UP"
             android:textSize="14sp"
             android:textColor="@android:color/black"
@@ -186,4 +203,5 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
+    </LinearLayout>

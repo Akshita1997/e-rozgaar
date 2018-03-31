@@ -112,85 +112,85 @@ public class bottom_nav extends AppCompatActivity implements BottomNavigationVie
         return loadFragment(fragment);
     }
 
-    private void makeJsonObjectRequest() {
-
-        showpDialog();
-        String urlJsonObj = "https://plausible-alley.glitch.me/admins/profile";
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Method.GET,
-                urlJsonObj, null, new Response.Listener<JSONObject>() {
-
-            @Override
-            public void onResponse(JSONObject response) {
-                Log.d(TAG, response.toString());
-
-
-                try {
-                    //  Parsing json object response
-                    // response will be a json object
-                    String name = response.getString("username");
-                String email = response.getString("email");
-//                    JSONObject phone = response.getJSONObject("phone");
-                    String designation = response.getString("designation");
-                    String dept = response.getString("department");
+//    private void makeJsonObjectRequest() {
 //
-
-//                    jsonResponse = "";
-//                    jsonResponse += "Name: " + name + "\n\n";
-//                    jsonResponse += "Email: " + email + "\n\n";
-//                    jsonResponse += "Home: " + home + "\n\n";
-//                    jsonResponse += "Mobile: " + mobile + "\n\n";
-
-                    jsonResponse = name;
-                    txtResponse.setText(jsonResponse);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(),
-                            "Error: " + e.getMessage(),
-                            Toast.LENGTH_LONG).show();
-                }
-                hidepDialog();
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(TAG, "Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
-                // hide the progress dialog
-                hidepDialog();
-            }
-        }){
-
-            /**
-             * Passing some request headers
-             */
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                //headers.put("Content-Type", "application/json");
-                headers.put("token", "Value");
-                return headers;
-            }
-        };
-
-
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(jsonObjReq);
-    }
-
-
-
-    private void showpDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
-    }
-
-    private void hidepDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
-    }
+//        showpDialog();
+//       // String urlJsonObj = "https://plausible-alley.glitch.me/admins/profile";
+//        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Method.GET,
+//                urlJsonObj, null, new Response.Listener<JSONObject>() {
+//
+//            @Override
+//            public void onResponse(JSONObject response) {
+//                Log.d(TAG, response.toString());
+//
+//
+//                try {
+//                    //  Parsing json object response
+//                    // response will be a json object
+//                    String name = response.getString("username");
+//                String email = response.getString("email");
+////                    JSONObject phone = response.getJSONObject("phone");
+//                    String designation = response.getString("designation");
+//                    String dept = response.getString("department");
+////
+//
+////                    jsonResponse = "";
+////                    jsonResponse += "Name: " + name + "\n\n";
+////                    jsonResponse += "Email: " + email + "\n\n";
+////                    jsonResponse += "Home: " + home + "\n\n";
+////                    jsonResponse += "Mobile: " + mobile + "\n\n";
+//
+//                    jsonResponse = name;
+//                    txtResponse.setText(jsonResponse);
+//
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                    Toast.makeText(getApplicationContext(),
+//                            "Error: " + e.getMessage(),
+//                            Toast.LENGTH_LONG).show();
+//                }
+//                hidepDialog();
+//            }
+//        }, new Response.ErrorListener() {
+//
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                VolleyLog.d(TAG, "Error: " + error.getMessage());
+//                Toast.makeText(getApplicationContext(),
+//                        error.getMessage(), Toast.LENGTH_SHORT).show();
+//                // hide the progress dialog
+//                hidepDialog();
+//            }
+//        }){
+//
+//            /**
+//             * Passing some request headers
+//             */
+//            @Override
+//            public Map<String, String> getHeaders() throws AuthFailureError {
+//                HashMap<String, String> headers = new HashMap<String, String>();
+//                //headers.put("Content-Type", "application/json");
+//                headers.put("token", "Value");
+//                return headers;
+//            }
+//        };
+//
+//
+//        // Adding request to request queue
+//        AppController.getInstance().addToRequestQueue(jsonObjReq);
+//    }
+//
+//
+//
+//    private void showpDialog() {
+//        if (!pDialog.isShowing())
+//            pDialog.show();
+//    }
+//
+//    private void hidepDialog() {
+//        if (pDialog.isShowing())
+//            pDialog.dismiss();
+//    }
 }
 
 

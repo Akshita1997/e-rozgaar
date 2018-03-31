@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,12 +28,6 @@
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/logo"
                 />
-
-            <!--<ImageView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent" -->
-    <!--android:src="@drawable/bg"/>-->
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,14 +41,16 @@
                 android:maxLines="1"
                 android:drawableLeft="@drawable/ic_profile"
                 android:layout_marginTop="70dp"
-                android:id="@+id/email_Lid"
+
                 />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#f9d7db"/>
+                android:background="#f9d7db"
+
+
+                />
             <EditText
-                android:id="@+id/password_Lid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -70,13 +65,11 @@
                 android:drawableLeft="@drawable/ic_pswrd"
 
                 />
-
-
-
-
-
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#f9d7db"/>-->
             <Button
-                android:id="@+id/sign_in_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_login"
@@ -86,13 +79,7 @@
                 android:clickable="true"
                 android:layout_marginTop="24dp"
                 style="@style/Base.TextAppearance.AppCompat.Body1"/>
-
-
-
-        <!-- Link to Signup Screen -->
-
             <Button
-                android:id="@+id/sign_up_link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_signup"
@@ -104,13 +91,9 @@
                 android:clickable="true"
                 android:padding="16dp"
                 />
-        <TextView
-            android:id="@+id/response"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
 
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

@@ -65,8 +65,8 @@
         <activity android:name=".AfterScan" />
         <activity android:name=".Files" />
         <activity android:name=".nextdest" />
-        <activity android:name=".Profile2"></activity>
+        <activity android:name=".Profile2" />
+        <activity android:name=".nextHoldOn"></activity>
     </application>
-
 
 </manifest>

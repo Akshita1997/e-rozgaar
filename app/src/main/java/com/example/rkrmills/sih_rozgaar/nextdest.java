@@ -45,7 +45,8 @@ public class nextdest extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(),"your file has gone to the next official", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getBaseContext(),"your file has gone to the next official", Toast.LENGTH_SHORT).show();
+
             }
 
         });

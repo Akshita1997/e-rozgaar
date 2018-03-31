@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_splash_screen2"
-
+android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-
+    android:background="@drawable/new_login_gradients"
     tools:context="com.example.rkrmills.sih_rozgaar.SplashScreen2">
     <!--<TextView-->
         <!--android:layout_width="match_parent"-->
@@ -29,9 +29,11 @@
         <!--android:text="www.erozgaar.info" />-->
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/splashbunty"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:src="@drawable/logo"
+
+
         android:scaleType="centerCrop"
         />
 
