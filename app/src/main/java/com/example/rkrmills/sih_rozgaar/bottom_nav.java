@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -38,6 +39,9 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class bottom_nav extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
@@ -64,7 +68,7 @@ public class bottom_nav extends AppCompatActivity implements BottomNavigationVie
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        loadFragment(new profile_fragment());
+        loadFragment(new files_fragment());
     }
 
     @Override
@@ -90,13 +94,15 @@ public class bottom_nav extends AppCompatActivity implements BottomNavigationVie
         switch (item.getItemId()){
 
             case R.id.action_profile:
-                fragment = new profile_fragment();
-                 String urlJsonObj = "https://plausible-alley.glitch.me/admins/random";
-                makeJsonObjectRequest();
+                Intent intent = new Intent(bottom_nav.this, Profile2.class);
+                startActivity(intent);
+               // makeJsonObjectRequest();
 
                 break;
             case R.id.action_scan:
-                fragment = new scan_fragment();
+              //  fragment = new scan_fragment();
+                Intent intent2 = new Intent(bottom_nav.this, AfterScan.class);
+                startActivity(intent2);
                 break;
             case R.id.action_files:
                 fragment = new files_fragment();
@@ -109,7 +115,7 @@ public class bottom_nav extends AppCompatActivity implements BottomNavigationVie
     private void makeJsonObjectRequest() {
 
         showpDialog();
-
+        String urlJsonObj = "https://plausible-alley.glitch.me/admins/profile";
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Method.GET,
                 urlJsonObj, null, new Response.Listener<JSONObject>() {
 
@@ -117,15 +123,17 @@ public class bottom_nav extends AppCompatActivity implements BottomNavigationVie
             public void onResponse(JSONObject response) {
                 Log.d(TAG, response.toString());
 
+
                 try {
-                    // Parsing json object response
+                    //  Parsing json object response
                     // response will be a json object
-                    String name = response.getString("msg");
-//                    String email = response.getString("email");
+                    String name = response.getString("username");
+                String email = response.getString("email");
 //                    JSONObject phone = response.getJSONObject("phone");
-//                    String home = phone.getString("home");
-//                    String mobile = phone.getString("mobile");
+                    String designation = response.getString("designation");
+                    String dept = response.getString("department");
 //
+
 //                    jsonResponse = "";
 //                    jsonResponse += "Name: " + name + "\n\n";
 //                    jsonResponse += "Email: " + email + "\n\n";
@@ -153,11 +161,27 @@ public class bottom_nav extends AppCompatActivity implements BottomNavigationVie
                 // hide the progress dialog
                 hidepDialog();
             }
-        });
+        }){
+
+            /**
+             * Passing some request headers
+             */
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                //headers.put("Content-Type", "application/json");
+                headers.put("token", "Value");
+                return headers;
+            }
+        };
+
 
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(jsonObjReq);
     }
+
+
+
     private void showpDialog() {
         if (!pDialog.isShowing())
             pDialog.show();

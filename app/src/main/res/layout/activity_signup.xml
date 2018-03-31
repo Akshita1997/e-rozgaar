@@ -5,12 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context="com.example.rkrmills.sih_rozgaar.signup">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/colorPrimaryDark"
+
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
@@ -36,20 +37,8 @@
                 android:id="@+id/username_Sid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:hint="name" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/designation_Sid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="designation"
-                android:textColor="@color/white"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -65,18 +54,33 @@
                 android:textColor="@color/white"/>
         </android.support.design.widget.TextInputLayout>
 
+
         <android.support.design.widget.TextInputLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/office_Sid"
+                android:id="@+id/designation_Sid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="office"
+                android:hint="designation"
                 android:textColor="@color/white"/>
         </android.support.design.widget.TextInputLayout>
+
+
+        <!--<android.support.design.widget.TextInputLayout-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<android.support.design.widget.TextInputEditText-->
+                <!--android:id="@+id/office_Sid"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="office"-->
+                <!--android:textColor="@color/white"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
 
         <android.support.design.widget.TextInputLayout
 
@@ -146,9 +150,10 @@
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:background="@color/colorAccent"
             android:text="SIGN UP"
+            android:textSize="14sp"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
         <!-- Link to Login Screen -->
@@ -157,12 +162,12 @@
             android:id="@+id/login_link"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="0dp"
             android:background="@null"
-            android:text="Already Registred? Login!"
+            android:text="Already Registered? Login!"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
-            android:textSize="15dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/response"

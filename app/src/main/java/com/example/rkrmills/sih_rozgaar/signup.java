@@ -12,6 +12,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -28,13 +29,15 @@ import java.util.HashMap;
 import java.util.Map;
 public class signup extends AppCompatActivity {
 
+    public  String token, official_id;
     private Button LoginLink, nextStepButton;
 
-    TextView _username, _designation, _department, _office, _email, _pswrd, _response;
+    TextView _username, _designation, _department,  _email, _pswrd, _response;
 
-//    android.support.v7.widget.AppCompatButton _sendRequest;
+    //    android.support.v7.widget.AppCompatButton _sendRequest;
     Button signup;
     ProgressBar _proProgressBar;
+
 
 
     @Override
@@ -45,23 +48,23 @@ public class signup extends AppCompatActivity {
         _username = (TextView) findViewById(R.id.username_Sid);
         _designation =(TextView) findViewById(R.id.designation_Sid);
         _department = (TextView)findViewById(R.id.dpt_Sid);
-        _office =(TextView)findViewById(R.id.office_Sid);
+
         _email = (TextView) findViewById(R.id.email_Sid);
         _pswrd =(TextView) findViewById(R.id.pswrd_Sid);
         _response = (TextView) findViewById(R.id.response);
         _proProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         signup = (Button) findViewById(R.id.sign_up_btn);
 
-//        LoginLink = (Button) findViewById(R.id.login_link);
-//        nextStepButton = (Button) findViewById(R.id.next_step_button);
-//
-//        LoginLink.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(signup.this, MainActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        LoginLink = (Button) findViewById(R.id.login_link);
+        //nextStepButton = (Button) findViewById(R.id.next_step_button);
+
+        LoginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(signup.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //hooking onclick listener of button
         signup.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +86,7 @@ public class signup extends AppCompatActivity {
                                     JSONObject ResponseObject = new JSONObject(response);
                                     //JSONObject json_LL = ResponseObject.getJSONObject("success");
                                     String str_value=ResponseObject.getString("success");
+
                                     if(str_value.equals("true")) {
                                         Intent intent = new Intent(signup.this, MainActivity.class);
                                         startActivity(intent);
@@ -111,7 +115,7 @@ public class signup extends AppCompatActivity {
                         params.put("username", _username.getText().toString());
                         params.put("designation", _designation.getText().toString());
                         params.put("department", _department.getText().toString());
-                        params.put("office", _office.getText().toString());
+
                         params.put("email", _email.getText().toString());
                         params.put("password", _pswrd.getText().toString());
 
@@ -125,6 +129,7 @@ public class signup extends AppCompatActivity {
 
             }
         });
+
 
     }
 }

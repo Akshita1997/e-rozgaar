@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class profile extends AppCompatActivity {
 
     private TextView editProfile;
-    private TextView position_name;
+    private TextView position_name, profile_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,8 @@ public class profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         editProfile = (TextView)findViewById(R.id.editProfile);
-        position_name = (TextView) findViewById(R.id.position);
+        position_name = (TextView) findViewById(R.id.designation);
+        profile_name = (TextView) findViewById(R.id.profile_name);
 
         position_name.setText(getIntent().getStringExtra("arg"));
 
@@ -36,6 +37,7 @@ public class profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

@@ -6,22 +6,22 @@
     <item
         android:id="@+id/action_files"
         android:enabled="true"
-        android:icon="@drawable/ic_files"
+        android:icon="@drawable/ic_action_name"
         android:title="My files"
         app1:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_scan"
         android:enabled="true"
-        android:icon="@drawable/ic_scan"
-        android:title="scan"
+        android:icon="@drawable/ic_scan2"
+        android:title="Scan"
         app1:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_profile"
         android:enabled="true"
         android:icon="@drawable/ic_profile"
-        android:title="profile"
+        android:title="My Profile"
         app1:showAsAction="ifRoom"/>
 
 </menu>

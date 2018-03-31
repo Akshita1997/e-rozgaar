@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="com.example.rkrmills.sih_rozgaar.Profile2">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="16dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageView"/>
+
+    <LinearLayout
+        android:layout_below="@+id/edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:id="@+id/Linear1">
+        <TextView
+            android:id="@+id/nameH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="40dp" />
+        <TextView
+            android:id="@+id/departmentH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Department"
+            android:paddingTop="40dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/nameH"
+            />
+
+        <TextView
+            android:id="@+id/designationH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designation"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="40dp"/>
+
+        <TextView
+            android:id="@+id/profile_emailH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email ID"
+            android:paddingTop="40dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/designationH"
+            />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/edit_profile"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/Linear1">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akshita"
+            android:paddingTop="40dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information Technology "
+            android:paddingTop="40dp"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/departmentH"/>
+
+
+        <TextView
+            android:id="@+id/designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:paddingTop="40dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/departmentH"
+            />
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email "
+            android:textSize="20sp"
+            android:paddingTop="40dp"
+            android:layout_below="@+id/designation"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>
+

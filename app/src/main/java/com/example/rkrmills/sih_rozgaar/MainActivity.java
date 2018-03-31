@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private Button SignUpLink, SignInBtn;
     private TextView email, password, _response;
     ProgressBar _proProgressBar;
-    public String token;
+    public static String token,user_id,email1,designation,name1,department;
+            public String official_id,name,jsonemail,jsondesignation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         SignUpLink = (Button) findViewById(R.id.sign_up_link);
-        SignInBtn = (Button) findViewById(R.id.sign_in_button);
 
+        SignInBtn = (Button) findViewById(R.id.sign_in_button);
         email = (TextView) findViewById(R.id.email_Lid);
         password =(TextView) findViewById(R.id.password_Lid);
 
@@ -75,9 +76,16 @@ public class MainActivity extends AppCompatActivity {
                                 // Display the response string.
                                 try {
                                     JSONObject ResponseObject = new JSONObject(response);
-                                    //JSONObject json_LL = ResponseObject.getJSONObject("success");
+//
+
                                     String str_value=ResponseObject.getString("success");
+                                    user_id = ResponseObject.getString("user_id");
+                                    designation = ResponseObject.getString("designation");
+                                    email1=ResponseObject.getString("email");
                                     token = ResponseObject.getString("token");
+                                    name1 = ResponseObject.getString("name");
+                                    department  =ResponseObject.getString("department");
+
                                     if(str_value.equals("true")) {
                                         Intent intent = new Intent(MainActivity.this, bottom_nav.class);
                                         startActivity(intent);
